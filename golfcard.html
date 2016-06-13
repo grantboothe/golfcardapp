@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Golf Score</title>
+    <script src="script.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div id="overlaycontainer">
+    <div id="contentdiv">
+        <input type="text" onchange="populatelist(this.value)">
+
+        <select id="courseSelectionMenu" onchange="selectCourse(this.value)"></select>
+        <select id="theteebox" onchange="setCourseInfo(this.value)"></select>
+        <div id="golfbanner">
+            <div class="blackbar">
+                <div class="barleft">
+                    <div id="golflogo"></div>
+                    <div id="logotext">Golf Score Card</div>
+                </div>
+                <div class="barright">
+                    <div id="countdown"></div>
+                </div>
+            </div>
+            <div id="scorecard">
+                <div id="leftcard"></div>
+                <div id="rightcard"></div>
+            </div>
+            <div id="golfcourselabel"></div>
+        </div>
+    </div>
+    <button onclick="addplayers()">Add Players</button>
+    <button onclick="deleteplayers()">Delete Players</button>
+    <div id="mymap" style="width: 500px;height: 400px;"></div>
+</div>
+<div id="container"></div>
+
+
+</body>
+</html>
